@@ -12,7 +12,7 @@ class User extends Authenticatable
     use HasApiTokens, Notifiable;
 
     /**
-     * Атрибуты, которые можно массово заполнять (mass assignable).
+     * The attributes that are mass assignable.
      *
      * @var array
      */
@@ -24,7 +24,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Атрибуты, которые должны быть скрыты для массивов.
+     * The attributes that should be hidden for arrays.
      *
      * @var array
      */
@@ -34,7 +34,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Атрибуты, которые должны быть приведены к родным типам.
+     * The attributes that should be cast to native types.
      *
      * @var array
      */

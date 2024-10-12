@@ -15,12 +15,11 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Проверяем, что пользователь авторизован и имеет роль администратора
+        // Check if the user is authenticated and has the admin role
         if (!auth()->check() || auth()->user()->role !== 'admin') {
-            return redirect('/'); // Или перенаправление на страницу авторизации /login
+            return redirect('/'); // Or redirect to the login page /login
         }
 
         return $next($request);
     }
 }
-
